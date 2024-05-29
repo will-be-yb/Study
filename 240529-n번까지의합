@@ -1,0 +1,55 @@
+24-05-29
+n번까지의 합을 구하는 코드
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main()
+{
+int a=0;
+int sum=0;
+scanf("%d", &a);
+
+    for (int i=0; i<=a ; i++)
+    {
+      sum += i;
+
+    }
+      printf("%d", sum);
+
+
+return 0;
+
+    
+}
+
+
+//내 오답 
+
+출력값을 for안으로 넣어버림
+그럼 출력값은 아예 다르게 제공됨
+5
+01361015
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main()
+{
+int a=0;
+int sum=0;
+scanf("%d", &a);
+
+    for (int i=0; i<=a ; i++)
+    {
+      sum += i;
+      printf("%d", sum);
+    }
+
+
+
+return 0;
+
+    
+}
