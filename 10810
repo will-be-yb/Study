@@ -65,3 +65,42 @@ int main() {
 
     return 0;
 }
+
+
+/////
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() 
+{
+int boxN;
+int lineN;
+
+scanf("%d %d", &boxN, &lineN);
+
+int boxArray[boxN +1];
+for(int i=1; i<=boxN; i++)
+{
+    boxArray[i] = 0;
+}
+
+for(int i=0; i<lineN; i++)
+{
+    int firstN, lastN, selectN;
+    scanf("%d %d %d", &firstN, &lastN, &selectN);
+    
+    for(int j= firstN; j<=lastN; j++)
+    {
+        boxArray[j] = selectN;
+    }
+    
+}
+
+for (int i = 1; i <= boxN; i++)
+{
+    printf("%d ", boxArray[i]);
+}
+
+
+    return 0;
+}
