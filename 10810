@@ -1,1 +1,32 @@
+// 240715 - 1
 
+#include <stdio.h>
+
+int main()
+{
+
+int boxN;
+int lineN;
+int firstN;
+int lastN;
+int selectN;
+int boxArray[]={0};
+
+scanf("%d %d", &boxN, & lineN);
+for (int i = 0; i < lineN; i++)
+{
+    scanf("%d %d %d", &firstN, &lastN, &selectN);
+    for(int j=firstN; j<lastN; j++)
+    {
+        boxArray[j]+= j;
+    }
+
+if (boxArray[selectN]=0)
+printf("0");
+
+else
+printf("%d", boxArray[selectN]);
+
+}
+    return 0;
+}
