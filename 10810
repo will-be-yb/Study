@@ -30,3 +30,38 @@ printf("%d", boxArray[selectN]);
 }
     return 0;
 }
+
+//이상해서 Claud와 chat gpt 문제 풀이 참고 
+
+#include <stdio.h>
+
+int main() {
+    int boxN;
+    int lineN;
+
+    // 1. 상자(N)와 라인(M) 수 입력받기
+    scanf("%d %d", &boxN, &lineN);
+
+    // 2. 배열 초기화 (1-based 인덱스 사용을 위해 크기 boxN+1로 설정)
+    int boxArray[boxN + 1];
+    for (int i = 1; i <= boxN; i++) {
+        boxArray[i] = 0;
+    }
+
+    // 3. 라인 정보 입력받고 상자 배열 업데이트
+    for (int i = 0; i < lineN; i++) {
+        int firstN, lastN, selectN;
+        scanf("%d %d %d", &firstN, &lastN, &selectN);
+
+        for (int j = firstN; j <= lastN; j++) {
+            boxArray[j] = selectN;
+        }
+    }
+
+    // 4. 최종 상자 배열 출력 (1-based 인덱스 사용)
+    for (int i = 1; i <= boxN; i++) {
+        printf("%d ", boxArray[i]);
+    }
+
+    return 0;
+}
