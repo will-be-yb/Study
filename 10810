@@ -104,3 +104,39 @@ for (int i = 1; i <= boxN; i++)
 
     return 0;
 }
+
+
+
+///////24-07-16 다시 풀어봤는데 결과가 잘못 제공,
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main()
+
+{
+
+int boxN;
+int lineN;
+
+scanf("%d %d", &boxN, &lineN);
+int boxArray[boxN+1];
+    for(int i=1; i<=boxN; i++)
+    {
+
+        boxArray[i] = 0;
+    }
+
+int firstN, lastN, selectN;
+
+scanf("%d %d %d ",&firstN, &lastN, &selectN );
+    for(int i=firstN; i<=lastN; i++)
+    {
+        boxArray[i] = selectN;
+    }
+
+printf("%d", boxArray[selectN]);
+
+    return 0;
+}
+
+
